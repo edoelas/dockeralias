@@ -5,3 +5,11 @@ function dopsff() {
 function doex() {
   docker exec -it $(dopsff) /bin/bash
 }
+
+function dcdo() {
+    docker-compose down
+}
+
+function dcup() {
+    docker-compose up -d
+}
