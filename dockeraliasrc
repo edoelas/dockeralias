@@ -1,0 +1,7 @@
+function dopsff() {
+  docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}" | tail -n +2 | fzf | awk '{{print $1}}'
+}
+
+function doex() {
+  docker exec -it $(dopsff) /bin/bash
+}
